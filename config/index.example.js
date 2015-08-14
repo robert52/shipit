@@ -12,8 +12,8 @@ module.exports = {
   app: {
     name: "--> shipit -->"
   },
-  swig: {
-    cache: false,
+  proxy: {
+    trust: true
   },
   serveStatic: true
 };

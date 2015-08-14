@@ -10,15 +10,6 @@ module.exports.init = function(app) {
   var env = app.get('env');
   var root = app.get('root');
 
-  app.engine('html', swig.renderFile);
-  app.set('views', root + '/app/views');
-  app.set('view engine', 'html');
-  if (config.swig.cache) {
-    swig.setDefaults({ cache: 'memory' });
-  } else {
-    swig.setDefaults({ cache: false });
-  }
-
   if (config.proxy.trust) {
     app.enable('trust proxy');
   }
