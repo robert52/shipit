@@ -4,7 +4,6 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var serveStatic = require('serve-static');
-var expressValidator = require('express-validator');
 var config = require('./index');
 
 module.exports.init = function(app) {
@@ -27,7 +26,6 @@ module.exports.init = function(app) {
   /**
    * Common express configs
    */
-  app.use(expressValidator());
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
   app.use(methodOverride());
