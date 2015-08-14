@@ -1,5 +1,7 @@
 'use strict';
 
+var config = require('../config');
+
 function debug(app, data) {
   console.log(app, '::', data);
 }
