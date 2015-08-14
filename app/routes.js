@@ -22,3 +22,5 @@ router.post(config.hook.route, function(req, res, next) {
     message: config.hook.message
   });
 });
+
+module.exports = router;
